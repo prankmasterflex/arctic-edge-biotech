@@ -1,0 +1,302 @@
+:root {
+    /* Color Palette */
+    --color-primary: #0A5E5C;
+    --color-primary-dark: #043D3B;
+    --color-accent: #7CBFB9;
+    --color-accent-light: #B8E0DD;
+    
+    /* Neutrals */
+    --color-bg-body: #FAFBFB;
+    --color-bg-alt: #F4F6F6;
+    --color-text-main: #2D3A39;
+    --color-text-muted: #5A6B6A;
+    --color-white: #FFFFFF;
+    
+    /* Fonts */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'DM Sans', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;   /* 8px */
+    --spacing-sm: 1rem;     /* 16px */
+    --spacing-md: 2rem;     /* 32px */
+    --spacing-lg: 4rem;     /* 64px */
+    --spacing-xl: 8rem;     /* 128px */
+    
+    /* Structure */
+    --container-width: 1200px;
+    --header-height: 80px;
+    --border-radius: 4px;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-body);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-primary-dark);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utilities */
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.eyebrow {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 2rem;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-sm {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 1px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    margin-left: var(--spacing-sm);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-accent-light);
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: rgba(250, 251, 251, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(4, 61, 59, 0.05);
+    z-index: 1000;
+}
+
+.header-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-primary-dark);
+    font-weight: 700;
+    font-size: 1.125rem;
+    letter-spacing: -0.01em;
+}
+
+.logo-text {
+    position: relative;
+    top: 1px;
+}
+
+.nav {
+    display: none; /* Mobile first hidden, styling for desktop below */
+}
+
+@media (min-width: 768px) {
+    .nav {
+        display: block;
+    }
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding-top: calc(var(--header-height) + var(--spacing-lg));
+    padding-bottom: var(--spacing-lg);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--color-bg-body) 0%, var(--color-bg-alt) 100%);
+    overflow: hidden;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .hero-container {
+        grid-template-columns: 1.2fr 1fr;
+    }
+}
+
+.hero-headline {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary-dark);
+}
+
+@media (min-width: 768px) {
+    .hero-headline {
+        font-size: 4rem;
+    }
+}
+
+.hero-subtext {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-md);
+    max-width: 540px;
+}
+
+.hero-visual {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 8px; /* Slightly easier than perfect circle for now */
+    box-shadow: 0 20px 40px rgba(10, 94, 92, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(124, 191, 185, 0.2);
+}
+
+.molecule-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+/* Abstract Molecule Art CSS */
+.molecule-structure {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.molecule-structure::before,
+.molecule-structure::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* Central Atom */
+.molecule-structure::before {
+    width: 60px;
+    height: 60px;
+    background: var(--color-accent);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 20px rgba(124, 191, 185, 0.2);
+}
+
+/* Orbiting Atom */
+.molecule-structure::after {
+    width: 30px;
+    height: 30px;
+    background: var(--color-primary);
+    top: 20%;
+    left: 80%;
+    box-shadow: 0 0 0 10px rgba(10, 94, 92, 0.1);
+}
+
+.footer {
+    padding: var(--spacing-md) 0;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
