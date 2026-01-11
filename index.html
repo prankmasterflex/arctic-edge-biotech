@@ -76,7 +76,6 @@
             <a href="#" class="logo">
                 <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-                    <!-- Simple geometric molecular representation -->
                     <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.2" />
                     <circle cx="16" cy="8" r="3" fill="currentColor" />
                     <circle cx="23" cy="20" r="3" fill="currentColor" />
@@ -86,17 +85,22 @@
                 <span class="logo-text">Arctic Edge Group</span>
             </a>
 
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
             <nav class="nav">
                 <ul class="nav-list">
                     <li><a href="#science" class="nav-link">Science</a></li>
                     <li><a href="#solutions" class="nav-link">Solutions</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#team" class="nav-link">Team</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#contact" class="btn btn-primary-outline mobile-nav-btn">Partner With Us</a></li>
                 </ul>
             </nav>
-
-            <a href="#partner" class="btn btn-primary btn-sm">Partner With Us</a>
         </div>
     </header>
 
@@ -808,6 +812,36 @@
             const animatedElements = document.querySelectorAll('.fade-in-up');
             animatedElements.forEach(el => observer.observe(el));
         });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav');
+        const navLinks = document.querySelectorAll('.nav-link'); // Select all nav links
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                menuToggle.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+
+        // Close menu when clicking "Partner With Us" button inside mobile menu
+        const partnerBtn = document.querySelector('.mobile-nav-btn');
+        if (partnerBtn) {
+            partnerBtn.addEventListener('click', () => {
+                nav.classList.remove('active');
+                menuToggle.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        }
     </script>
 </body>
 
