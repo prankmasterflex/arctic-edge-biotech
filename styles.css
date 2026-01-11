@@ -1534,3 +1534,89 @@ details[open] .faq-answer {
 .press-note a:hover {
     color: var(--color-accent);
 }
+
+/* Visual Polish & Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced Hover Effects */
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(10, 94, 92, 0.3);
+}
+
+.team-card {
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: scale(1.02);
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-accent);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Image Styles Update */
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto var(--spacing-md);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    /* Override previous */
+}
+
+/* Remove ::after pseudo-element from previous placeholder */
+.team-photo::after {
+    content: none;
+    display: none;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-image-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hide old placeholders if they exist */
+.lab-placeholder,
+.photo-dr,
+.photo-sk,
+.photo-mo,
+.photo-ev {
+    background: transparent;
+}

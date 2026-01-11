@@ -21,7 +21,7 @@
         content="Redefining odor control through dermal pH optimization and bacterial ecosystem balance.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arcticedgegroup.com">
-    <meta property="og:image" content="https://arcticedgegroup.com/og-image.jpg">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1200&q=80">
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -65,6 +65,8 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+    <!-- Preload Hero Image -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&q=80">
 </head>
 
 <body>
@@ -348,9 +350,9 @@
 
                 <div class="about-company-grid">
                     <div class="about-image-col">
-                        <div class="lab-placeholder">
-                            <span>Laboratory Image</span>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&q=80"
+                            alt="Arctic Edge Group research facility" class="about-image fade-in-up" loading="lazy"
+                            width="600" height="400">
                     </div>
                     <div class="about-content-col">
                         <p>Arctic Edge Group LLC was founded on a simple premise: personal care should work with your
@@ -608,9 +610,8 @@
 
                 <div class="team-grid">
                     <div class="team-card">
-                        <div class="team-photo photo-dr">
-                            <span>DR</span>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80"
+                            alt="Dr. David Reinholt" class="team-photo fade-in-up" loading="lazy">
                         <h3 class="team-name">Dr. David Reinholt</h3>
                         <span class="team-role">Chief Executive Officer</span>
                         <p class="team-bio">Ph.D. in Biochemistry from MIT. Former R&D Director at Johnson & Johnson
@@ -618,9 +619,9 @@
                     </div>
 
                     <div class="team-card">
-                        <div class="team-photo photo-sk">
-                            <span>SK</span>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80"
+                            alt="Dr. Sarah Kimura" class="team-photo fade-in-up" loading="lazy"
+                            style="animation-delay: 0.1s;">
                         <h3 class="team-name">Dr. Sarah Kimura</h3>
                         <span class="team-role">Chief Scientific Officer</span>
                         <p class="team-bio">Dermatologist and microbiome researcher. Published 40+ peer-reviewed papers
@@ -628,9 +629,9 @@
                     </div>
 
                     <div class="team-card">
-                        <div class="team-photo photo-mo">
-                            <span>MO</span>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80"
+                            alt="Marcus Okonkwo" class="team-photo fade-in-up" loading="lazy"
+                            style="animation-delay: 0.2s;">
                         <h3 class="team-name">Marcus Okonkwo</h3>
                         <span class="team-role">VP of Product Development</span>
                         <p class="team-bio">15 years in cosmetic chemistry. Led development of high-efficacy natural
@@ -638,9 +639,9 @@
                     </div>
 
                     <div class="team-card">
-                        <div class="team-photo photo-ev">
-                            <span>EV</span>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80"
+                            alt="Dr. Elena Vasquez" class="team-photo fade-in-up" loading="lazy"
+                            style="animation-delay: 0.3s;">
                         <h3 class="team-name">Dr. Elena Vasquez</h3>
                         <span class="team-role">Director of Clinical Research</span>
                         <p class="team-bio">Specializes in clinical trial design for topical therapeutics. Former FDA
@@ -786,6 +787,28 @@
         </div>
     </footer>
 
+    <script>
+        // Scroll Animation Observer
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            const animatedElements = document.querySelectorAll('.fade-in-up');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>
