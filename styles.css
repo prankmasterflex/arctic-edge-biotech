@@ -524,6 +524,101 @@ ul {
     max-width: 200px;
 }
 
+/* About Company Section */
+.section-about-company {
+    background-color: var(--color-bg-alt);
+}
+
+.about-company-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+@media (min-width: 900px) {
+    .about-company-grid {
+        grid-template-columns: 1fr 1.2fr;
+        align-items: center;
+    }
+}
+
+.lab-placeholder {
+    width: 100%;
+    padding-bottom: 75%;
+    /* 4:3 Aspect Ratio */
+    background-color: #E2E8F0;
+    position: relative;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    /* Ensure rounded corners */
+}
+
+/* Optional: Add a subtle pattern/gradient to the placeholder */
+.lab-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.lab-placeholder span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    color: var(--color-text-muted);
+    font-size: 1.25rem;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.about-content-col p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-muted);
+    font-size: 1.0625rem;
+}
+
+.trust-indicators {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: var(--spacing-lg);
+}
+
+.trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    font-size: 0.9375rem;
+}
+
+.trust-icon {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    background: var(--color-white);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
 /* Solutions Section */
 .section-solutions {
     background-color: var(--color-bg-alt);
