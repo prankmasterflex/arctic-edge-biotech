@@ -271,21 +271,22 @@
     border-radius: 12px;
 }
 
-display: flex;
-align-items: center;
-justify-content: center;
-opacity: 0.8;
+/* Abstract Molecule Art CSS (kept for backward compatibility) */
+.molecule-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
 }
 
-/* Abstract Molecule Art CSS */
 .molecule-structure {
     width: 200px;
     height: 200px;
     position: relative;
     opacity: 0.6;
-    /* Soften the whole thing */
     filter: grayscale(100%);
-    /* Make it strictly monochrome for 'Clinical' feel */
 }
 
 .molecule-structure::before,
@@ -295,7 +296,6 @@ opacity: 0.8;
     border-radius: 50%;
 }
 
-/* Central Atom */
 .molecule-structure::before {
     width: 60px;
     height: 60px;
@@ -304,10 +304,8 @@ opacity: 0.8;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.03);
-    /* Neutral gray shadow */
 }
 
-/* Orbiting Atom */
 .molecule-structure::after {
     width: 30px;
     height: 30px;
@@ -315,5 +313,4 @@ opacity: 0.8;
     top: 20%;
     left: 80%;
     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.02);
-    /* Neutral gray shadow */
 }
