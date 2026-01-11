@@ -1070,3 +1070,204 @@ ul {
     margin: 0 8px;
     opacity: 0.5;
 }
+
+/* Solutions / Products Section */
+.section-solutions {
+    background-color: var(--color-bg-body);
+}
+
+/* Product Hero Card */
+.product-hero {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    border: 1px solid transparent;
+    /* Fallback */
+    background-image: linear-gradient(var(--color-white), var(--color-white)),
+        linear-gradient(135deg, var(--color-accent), var(--color-primary));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 20px 40px rgba(10, 94, 92, 0.08);
+    /* Subtle teal shadow */
+    position: relative;
+    overflow: hidden;
+}
+
+.product-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: linear-gradient(90deg, #D4A84B, #F6E0A4, #D4A84B);
+    /* Gold gradient */
+    color: var(--color-primary-dark);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 4px 10px rgba(212, 168, 75, 0.3);
+}
+
+.hero-product-title {
+    font-family: var(--font-heading);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-xs);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.brand-collab {
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+}
+
+.edition-tag {
+    font-size: 1rem;
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: #D4A84B;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.product-name {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.1;
+}
+
+.product-tagline {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.product-description {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-md);
+    line-height: 1.6;
+}
+
+.feature-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.f-badge {
+    background-color: var(--color-bg-alt);
+    color: var(--color-primary-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: 1px solid rgba(10, 94, 92, 0.1);
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.availability-text {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+@media (min-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.product-card {
+    background: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: var(--color-accent);
+}
+
+.card-header {
+    margin-bottom: var(--spacing-sm);
+}
+
+.p-name {
+    font-size: 1.125rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.p-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
+    border-radius: 50px;
+    letter-spacing: 0.05em;
+}
+
+.tag-best {
+    background-color: #E6FFFA;
+    color: #0A5E5C;
+}
+
+.tag-derm {
+    background-color: #F0F5FF;
+    color: #2B6CB0;
+}
+
+.tag-micro {
+    background-color: #FAF5FF;
+    color: #6B46C1;
+}
+
+.p-type {
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.p-desc {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
