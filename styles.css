@@ -286,7 +286,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(10, 94, 92, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     overflow: hidden;
 }
 
@@ -304,6 +304,10 @@ ul {
     width: 200px;
     height: 200px;
     position: relative;
+    opacity: 0.6;
+    /* Soften the whole thing */
+    filter: grayscale(100%);
+    /* Make it strictly monochrome for 'Clinical' feel */
 }
 
 .molecule-structure::before,
@@ -317,21 +321,23 @@ ul {
 .molecule-structure::before {
     width: 60px;
     height: 60px;
-    background: var(--color-accent);
+    background: #E2E8F0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 0 20px rgba(124, 191, 185, 0.2);
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.03);
+    /* Neutral gray shadow */
 }
 
 /* Orbiting Atom */
 .molecule-structure::after {
     width: 30px;
     height: 30px;
-    background: var(--color-primary);
+    background: #CBD5E0;
     top: 20%;
     left: 80%;
-    box-shadow: 0 0 0 10px rgba(10, 94, 92, 0.1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.02);
+    /* Neutral gray shadow */
 }
 
 .footer {
