@@ -1,0 +1,129 @@
+/* Utilities */
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+/* Sections */
+.section {
+    padding: 6rem 0;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl);
+}
+
+.section-headline {
+    font-size: 2.75rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary-dark);
+    letter-spacing: -0.01em;
+}
+
+.section-subtext {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    font-weight: 400;
+}
+
+/* Grids */
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+@media (min-width: 900px) {
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.about-company-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+@media (min-width: 900px) {
+    .about-company-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Why Switch Grid */
+.why-switch-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+@media (min-width: 900px) {
+    .why-switch-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+@media (min-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+@media (min-width: 600px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

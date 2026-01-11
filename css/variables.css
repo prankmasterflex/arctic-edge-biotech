@@ -1,0 +1,45 @@
+:root {
+    /* Color Palette - Premium Biotech */
+    --color-primary: #0A5E5C;
+    --color-primary-dark: #043D3B;
+    --color-accent: #7CBFB9;
+    --color-accent-light: #B8E0DD;
+
+    /* Neutrals - High Contrast */
+    --color-bg-body: #FFFFFF;
+    --color-bg-alt: #F8FAF9;
+    /* More subtle off-white */
+    --color-text-main: #1A202C;
+    /* Darker for better readability */
+    --color-text-muted: #4A5568;
+    --color-white: #FFFFFF;
+
+    /* Fonts */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    /* Spacing Scale - Generous & rhythmic */
+    --spacing-xs: 0.5rem;
+    /* 8px */
+    --spacing-sm: 1.5rem;
+    /* 24px - Increased base spacing */
+    --spacing-md: 3rem;
+    /* 48px - Doubled */
+    --spacing-lg: 5rem;
+    /* 80px */
+    --spacing-xl: 8rem;
+    /* 128px */
+
+    /* Structure */
+    --container-width: 1280px;
+    /* Wider container */
+    --header-height: 90px;
+    --border-radius: 8px;
+    /* Slightly softer */
+
+    /* Shadows - Elevation System */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+}

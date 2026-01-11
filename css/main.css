@@ -1,0 +1,19 @@
+/* Main Stylesheet Import Hub */
+@import 'variables.css';
+@import 'base.css';
+@import 'layout.css';
+@import 'components.css';
+@import 'header.css';
+@import 'footer.css';
+@import 'responsive.css';
+
+/* Specific Section Customizations */
+.section-science {
+    background-color: var(--color-bg-alt);
+}
+
+.section-contact {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: var(--spacing-xl) 0;
+}

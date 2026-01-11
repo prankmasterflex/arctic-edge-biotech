@@ -1,0 +1,65 @@
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-body);
+    color: var(--color-text-main);
+    line-height: 1.7;
+    /* Increased for readability */
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--color-primary-dark);
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utilities */
+.eyebrow {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    /* Smaller but more spaced */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    /* Premium feel */
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}

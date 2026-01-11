@@ -64,9 +64,10 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Playfair+Display:wght@400;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
     <!-- Preload Hero Image -->
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&q=80">
+    <link rel="preload" as="image" href="images/hero-lab.jpg">
 </head>
 
 <body>
@@ -354,9 +355,8 @@
 
                 <div class="about-company-grid">
                     <div class="about-image-col">
-                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&q=80"
-                            alt="Arctic Edge Group research facility" class="about-image fade-in-up" loading="lazy"
-                            width="600" height="400">
+                        <img src="images/about-facility.jpg" alt="Arctic Edge Group research facility"
+                            class="about-image fade-in-up" loading="lazy" width="600" height="400">
                     </div>
                     <div class="about-content-col">
                         <p>Arctic Edge Group LLC was founded on a simple premise: personal care should work with your
@@ -614,8 +614,8 @@
 
                 <div class="team-grid">
                     <div class="team-card">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80"
-                            alt="Dr. David Reinholt" class="team-photo fade-in-up" loading="lazy">
+                        <img src="images/team-david.jpg" alt="Dr. David Reinholt" class="team-photo fade-in-up"
+                            loading="lazy">
                         <h3 class="team-name">Dr. David Reinholt</h3>
                         <span class="team-role">Chief Executive Officer</span>
                         <p class="team-bio">Ph.D. in Biochemistry from MIT. Former R&D Director at Johnson & Johnson
@@ -623,9 +623,8 @@
                     </div>
 
                     <div class="team-card">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80"
-                            alt="Dr. Sarah Kimura" class="team-photo fade-in-up" loading="lazy"
-                            style="animation-delay: 0.1s;">
+                        <img src="images/team-sarah.jpg" alt="Dr. Sarah Kimura" class="team-photo fade-in-up"
+                            loading="lazy" style="animation-delay: 0.1s;">
                         <h3 class="team-name">Dr. Sarah Kimura</h3>
                         <span class="team-role">Chief Scientific Officer</span>
                         <p class="team-bio">Dermatologist and microbiome researcher. Published 40+ peer-reviewed papers
@@ -633,9 +632,8 @@
                     </div>
 
                     <div class="team-card">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80"
-                            alt="Marcus Okonkwo" class="team-photo fade-in-up" loading="lazy"
-                            style="animation-delay: 0.2s;">
+                        <img src="images/team-marcus.jpg" alt="Marcus Okonkwo" class="team-photo fade-in-up"
+                            loading="lazy" style="animation-delay: 0.2s;">
                         <h3 class="team-name">Marcus Okonkwo</h3>
                         <span class="team-role">VP of Product Development</span>
                         <p class="team-bio">15 years in cosmetic chemistry. Led development of high-efficacy natural
@@ -643,9 +641,8 @@
                     </div>
 
                     <div class="team-card">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80"
-                            alt="Dr. Elena Vasquez" class="team-photo fade-in-up" loading="lazy"
-                            style="animation-delay: 0.3s;">
+                        <img src="images/team-elena.jpg" alt="Dr. Elena Vasquez" class="team-photo fade-in-up"
+                            loading="lazy" style="animation-delay: 0.3s;">
                         <h3 class="team-name">Dr. Elena Vasquez</h3>
                         <span class="team-role">Director of Clinical Research</span>
                         <p class="team-bio">Specializes in clinical trial design for topical therapeutics. Former FDA
@@ -662,61 +659,65 @@
 
 
         <section id="contact" class="section section-contact">
-            <div class="container contact-container">
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" action="#" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Dr. Jane Smith" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="jane@company.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company (Optional)</label>
-                            <input type="text" id="company" name="company" placeholder="Acme Biotech Inc.">
-                        </div>
-                        <div class="form-group">
-                            <label for="inquiry-type">Inquiry Type</label>
-                            <div class="select-wrapper">
-                                <select id="inquiry-type" name="inquiry-type">
-                                    <option value="partnership">Partnership Inquiry</option>
-                                    <option value="licensing">Licensing</option>
-                                    <option value="press">Press/Media</option>
-                                    <option value="general">General Question</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5"
-                                placeholder="Tell us about your project needs" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                    </form>
-                </div>
-
-                <div class="contact-info">
+            <div class="container">
+                <div class="section-header" style="text-align: left; max-width: 800px; margin-bottom: 3rem;">
                     <span class="eyebrow" style="color: rgba(255,255,255,0.7);">Partner With Us</span>
                     <h2 class="section-headline" style="color: white; margin-bottom: 2rem;">Interested in licensing our
                         technology or exploring collaboration opportunities?</h2>
+                </div>
 
-                    <div class="contact-block">
-                        <h3 class="contact-heading">Get in Touch</h3>
-                        <p class="contact-detail-row">
-                            <strong>Email:</strong> <a
-                                href="mailto:partnerships@arcticedgegroup.com">partnerships@arcticedgegroup.com</a>
-                        </p>
-                        <p class="contact-detail-row">
-                            <strong>Location:</strong> Cambridge, MA
-                        </p>
-                        <p class="response-time">We typically respond within 24-48 hours</p>
+                <div class="contact-container">
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Dr. Jane Smith" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company (Optional)</label>
+                                <input type="text" id="company" name="company" placeholder="Acme Biotech Inc.">
+                            </div>
+                            <div class="form-group">
+                                <label for="inquiry-type">Inquiry Type</label>
+                                <div class="select-wrapper">
+                                    <select id="inquiry-type" name="inquiry-type">
+                                        <option value="partnership">Partnership Inquiry</option>
+                                        <option value="licensing">Licensing</option>
+                                        <option value="press">Press/Media</option>
+                                        <option value="general">General Question</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5"
+                                    placeholder="Tell us about your project needs" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        </form>
                     </div>
 
-                    <div class="press-note">
-                        <p>For press inquiries, please email <a
-                                href="mailto:press@arcticedgegroup.com">press@arcticedgegroup.com</a></p>
+                    <div class="contact-info">
+                        <div class="contact-block">
+                            <h3 class="contact-heading">Get in Touch</h3>
+                            <p class="contact-detail-row">
+                                <strong>Email:</strong> <a
+                                    href="mailto:partnerships@arcticedgegroup.com">partnerships@arcticedgegroup.com</a>
+                            </p>
+                            <p class="contact-detail-row">
+                                <strong>Location:</strong> Cambridge, MA
+                            </p>
+                            <p class="response-time">We typically respond within 24-48 hours</p>
+                        </div>
+
+                        <div class="press-note">
+                            <p>For press inquiries, please email <a
+                                    href="mailto:press@arcticedgegroup.com">press@arcticedgegroup.com</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -791,58 +792,8 @@
         </div>
     </footer>
 
-    <script>
-        // Scroll Animation Observer
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // Only animate once
-                    }
-                });
-            }, observerOptions);
-
-            const animatedElements = document.querySelectorAll('.fade-in-up');
-            animatedElements.forEach(el => observer.observe(el));
-        });
-
-        // Mobile Menu Toggle
-        const menuToggle = document.querySelector('.mobile-menu-toggle');
-        const nav = document.querySelector('.nav');
-        const navLinks = document.querySelectorAll('.nav-link'); // Select all nav links
-
-        menuToggle.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
-        });
-
-        // Close menu when a link is clicked
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-                menuToggle.classList.remove('active');
-                document.body.classList.remove('menu-open');
-            });
-        });
-
-        // Close menu when clicking "Partner With Us" button inside mobile menu
-        const partnerBtn = document.querySelector('.mobile-nav-btn');
-        if (partnerBtn) {
-            partnerBtn.addEventListener('click', () => {
-                nav.classList.remove('active');
-                menuToggle.classList.remove('active');
-                document.body.classList.remove('menu-open');
-            });
-        }
-    </script>
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
