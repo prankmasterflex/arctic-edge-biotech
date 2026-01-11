@@ -233,7 +233,8 @@ ul {
     min-height: 90vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #FFFFFF 0%, #F0F4F4 100%);
+    background-color: #FFFFFF;
+    background: radial-gradient(circle at 50% 50%, #FFFFFF 0%, #FAFAFA 100%);
     overflow: hidden;
 }
 
@@ -344,7 +345,7 @@ ul {
 
 /* Sections */
 .section {
-    padding: var(--spacing-xl) 0;
+    padding: 6rem 0;
 }
 
 .section-header {
@@ -776,6 +777,20 @@ ul {
     overflow: hidden;
     position: relative;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    gap: 0;
+    /* Remove gap, use borders */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-item {
+    background: var(--color-white);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.faq-item:last-child {
+    border-bottom: none;
 }
 
 .visual-box {
@@ -1363,6 +1378,8 @@ ul {
     height: 24px;
     color: var(--color-primary);
     flex-shrink: 0;
+    opacity: 1;
+    /* Force visible */
 }
 
 .icon-plus,
@@ -1694,6 +1711,8 @@ details[open] .faq-answer {
         width: 100%;
         height: 100vh;
         background-color: var(--color-white);
+        display: flex;
+        /* Force flex */
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -1701,10 +1720,15 @@ details[open] .faq-answer {
         z-index: 1000;
         padding: 2rem;
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        visibility: hidden;
+        /* Hide when closed to prevent focus issues */
+        opacity: 0;
     }
 
     .nav.active {
         right: 0;
+        visibility: visible;
+        opacity: 1;
     }
 
     .nav-list {
@@ -1888,6 +1912,14 @@ details[open] .faq-answer {
     }
 
     .container {
-        padding: 0 var(--spacing-sm);
+        padding: 0 1.5rem;
+        /* Consistent mobile padding */
+    }
+
+    /* Footer Mobile Polish */
+    .footer .btn {
+        width: 100%;
+        max-width: 300px;
+        /* Prevent it from being too wide on tablets */
     }
 }
