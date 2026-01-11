@@ -919,3 +919,154 @@ ul {
     border-color: var(--color-primary);
     background-color: var(--color-white);
 }
+
+/* Footer Section */
+.footer {
+    background-color: #1A2524;
+    padding: 60px 0 30px;
+    color: #B8E0DD;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Mobile first */
+    gap: 40px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        /* Tablet */
+    }
+}
+
+@media (min-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        /* Desktop */
+    }
+}
+
+.footer-col {
+    text-align: left;
+}
+
+.footer-heading {
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-bottom: 16px;
+    display: block;
+    font-family: var(--font-heading);
+}
+
+.footer-logo {
+    color: var(--color-white);
+    margin-bottom: var(--spacing-md);
+    display: inline-flex;
+}
+
+.footer-tagline {
+    margin-bottom: var(--spacing-md);
+    opacity: 0.8;
+}
+
+.copyright-text {
+    font-size: 0.8125rem;
+    opacity: 0.6;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a,
+.contact-list a {
+    color: #B8E0DD;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.contact-list a:hover {
+    color: #7CBFB9;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+}
+
+.contact-list li {
+    margin-bottom: 8px;
+}
+
+.btn-footer {
+    background-color: #0A5E5C;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    margin-top: 16px;
+    display: inline-block;
+    border: none;
+}
+
+.btn-footer:hover {
+    background-color: #043D3B;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid #2D3A39;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+.footer-legal,
+.footer-links-right {
+    color: #5A6B6A;
+    font-size: 0.875rem;
+}
+
+.footer-legal a,
+.footer-links-right a {
+    color: #5A6B6A;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-legal a:hover,
+.footer-links-right a:hover {
+    color: #B8E0DD;
+}
+
+.separator {
+    margin: 0 8px;
+    opacity: 0.5;
+}
